@@ -1,0 +1,19 @@
+# version: '3.9'
+
+services:
+  qiita-local:
+    build: .
+    container_name: qiita-local
+    ports:
+      - "8080:8000"
+    restart: always
+    volumes:
+      - "./:/usr/app"
+    working_dir: /usr/app
+    tty: true
+    networks:
+      - qiita-public
+
+networks:
+  qiita-public:
+    driver: bridge
