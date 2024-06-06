@@ -24,11 +24,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Load environment variables from .env file
-        run: |
-          chmod +x load_env.sh
-          ./load_env.sh
-
       - uses: increments/qiita-cli/actions/publish@v1
         with:
           qiita-token: ${{ secrets.QIITA_TOKEN }}
