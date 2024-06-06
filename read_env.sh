@@ -37,7 +37,7 @@ else
 fi
 
 # test.yml の書き換え
-yml_text=${yml_text//secrets.QIITA_TOKEN/secrets.$token_text}
+yml_text=${yml_text//secrets.QIITA_TOKEN /secrets.$token_text }
 
 # test.yml に書き戻す
 echo "$yml_text" > ./.github/workflows/publish.yml
