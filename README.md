@@ -113,3 +113,50 @@ bash read_env.sh
 ```
 
 これで、基本的な設定は終了です。
+
+## 補足
+```read_env.sh```を走らせると```.github/workflows/publish.yml```に変更が加えられます。
+この変更は<B>絶対にcommitしないでください</B>。
+
+## 6. Qiitaアカウントとローカルの紐付け
+
+コマンドラインで以下の設定を行なってください。
+
+```bash
+npx qiita login
+```
+すると以下のように出てきます。
+```
+以下のURLにアクセスしてトークンを発行してください。（「read_qiita」と「write_qiita」にチェックを入れてください）
+  https://qiita.com/settings/tokens/new?read_qiita=1&write_qiita=1&description=qiita-cli
+発行したトークンを入力:
+```
+
+すでに、0.でQiitaトークンを発行しているので、そのトークンをここに貼り付けます。
+以下のテキストが出てくれば成功です。
+
+
+```
+Hi {Qiitaユーザー名}!
+```
+```
+ログインが完了しました 🎉
+以下のコマンドを使って執筆を始めましょう！
+
+🚀 コンテンツをブラウザでプレビューする
+  npx qiita preview
+
+🚀 新しい記事を追加する
+  npx qiita new (記事のファイルのベース名)
+
+🚀 記事を投稿、更新する
+  npx qiita publish (記事のファイルのベース名)
+
+💁 コマンドのヘルプを確認する
+  npx qiita help
+  
+```
+
+# 記事の投稿
+
+TBD
