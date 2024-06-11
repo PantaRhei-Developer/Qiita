@@ -6,11 +6,10 @@ RUN apt update \
     vim \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-
 WORKDIR /usr/app
 COPY ./package.json /usr/app/package.json
 RUN npm install
 
 COPY . /usr/app/
 
-CMD ["npx", "qiita", "init"]
+RUN npx qiita login --credential $(pwd)
